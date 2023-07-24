@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      database: movie-api-db
+      uri: mongodb+srv://vagnerpelais:YJW5MKBW8o2jYkxNrBAAQjmsz8nYL87wmxfQgmcuvdVcoqtxAcvopjPuSfaxnksAXDP5v8ArKLZnEqtY4N2GvooLqqqC6NvuGB2KdAcEN2kbzSZ7YBjhPJwrSaUvK6Rc@cluster0.8rlsizy.mongodb.net
