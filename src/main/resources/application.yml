@@ -1,6 +1,6 @@
 spring:
   data:
     mongodb:
-      database: movie-api-db
-      uri: mongodb+srv://vagnerpelais:YJW5MKBW8o2jYkxNrBAAQjmsz8nYL87wmxfQgmcuvdVcoqtxAcvopjPuSfaxnksAXDP5v8ArKLZnEqtY4N2GvooLqqqC6NvuGB2KdAcEN2kbzSZ7YBjhPJwrSaUvK6Rc@cluster0.8rlsizy.mongodb.net/?retryWrites=true&w=majority
+      database: ${env.MONGO_DATABASE}
+      uri: mongodb+srv://${env.MONGO_USER}:${env.MONGO_PASSWORD}@${env.MONGO_CLUSTER}/?retryWrites=true&w=majority
 
