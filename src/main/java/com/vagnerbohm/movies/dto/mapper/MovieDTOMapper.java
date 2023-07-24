@@ -14,12 +14,14 @@ public class MovieDTOMapper {
         MovieDTO movieDTO = new MovieDTO();
         BeanUtils.copyProperties(movieDocument, movieDTO);
 
+
         return movieDTO;
     }
 
     public static MovieDocument fromMovieDTO(MovieDTO movieDTO) {
         MovieDocument movieDocument = new MovieDocument();
         BeanUtils.copyProperties(movieDTO, movieDocument);
+
 
         return movieDocument;
     }
@@ -30,6 +32,7 @@ public class MovieDTOMapper {
         for(MovieDocument movieDocument : movieDocuments) {
             MovieDTO movieDTO = new MovieDTO();
             BeanUtils.copyProperties(movieDocument, movieDTO);
+
             movieDTOS.add(movieDTO);
         }
         return movieDTOS;
