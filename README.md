@@ -14,12 +14,12 @@ Before running the project, make sure you have the following prerequisites:
 
 1. Clone the repository to your local machine:
 ```agsl
-git clone <repository_url>
+git clone git@github.com:vagnerpelais/movies.git
 ```
 
 2. Navigate to the project root directory:
 ```agsl
-cd movie-review-api
+cd movies
 ```
 
 3. Open the application.properties file in the src/main/resources directory and update the MongoDB configuration or
