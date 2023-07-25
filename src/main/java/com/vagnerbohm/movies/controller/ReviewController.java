@@ -21,6 +21,7 @@ import static java.time.LocalDateTime.now;
 public class ReviewController {
     private final ReviewService reviewService;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping
     public ResponseEntity<HttpResponse> createReview(@RequestBody @Valid ReviewRequestBodyDTO payload) {
         return ResponseEntity.created(getUri(payload.getImdbId())).body(

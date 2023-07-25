@@ -17,6 +17,7 @@ import static java.time.LocalDateTime.now;
 public class MovieController {
     private final MovieService movieService;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
     public ResponseEntity<HttpResponse> getAllMovies()  {
         return ResponseEntity.ok().body(
@@ -29,6 +30,7 @@ public class MovieController {
         );
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/{id}")
     public ResponseEntity<HttpResponse> getMovieById(@PathVariable String id)  {
         return ResponseEntity.ok().body(

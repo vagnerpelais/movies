@@ -3,4 +3,9 @@ spring:
     mongodb:
       database: ${env.MONGO_DATABASE}
       uri: mongodb+srv://${env.MONGO_USER}:${env.MONGO_PASSWORD}@${env.MONGO_CLUSTER}/?retryWrites=true&w=majority
-
+  webmvc:
+    cors:
+      allowed-origins: "*"
+      allowed-methods: GET, POST, PUT, DELETE
+      allowed-headers: "*"
+      allow-credentials: true
