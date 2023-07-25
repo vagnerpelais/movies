@@ -1,14 +1,11 @@
 package com.vagnerbohm.movies.controller;
 
 import com.vagnerbohm.movies.document.HttpResponse;
-import com.vagnerbohm.movies.dto.MovieDTO;
 import com.vagnerbohm.movies.service.MovieService;
 import lombok.RequiredArgsConstructor;
-import org.bson.types.ObjectId;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Map;
 
@@ -44,17 +41,4 @@ public class MovieController {
         );
     }
 
-    @ExceptionHandler(ResponseStatusException.class)
-    public ResponseEntity<HttpResponse> handleResponseStatusException(ResponseStatusException e) {
-        HttpStatus status = (HttpStatus) e.getStatusCode();
-
-        return ResponseEntity.status(e.getStatusCode()).body(
-                HttpResponse.builder()
-                        .timeStamp(now().toString())
-                        .message(e.getReason())
-                        .status(status)
-                        .statusCode(e.getStatusCode().value())
-                        .build()
-        );
-    }
 }

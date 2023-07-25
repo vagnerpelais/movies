@@ -15,4 +15,8 @@ public class ReviewDocument {
     @Id
     private ObjectId id;
     private String body;
+
+    public ReviewDocument(String body) {
+        this.body = body;
+    }
 }

@@ -2,7 +2,6 @@ package com.vagnerbohm.movies.dto;
 
 import com.vagnerbohm.movies.document.ReviewDocument;
 import lombok.Data;
-import org.bson.types.ObjectId;
 
 
 import java.util.List;
